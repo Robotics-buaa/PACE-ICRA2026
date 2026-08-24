@@ -134,11 +134,14 @@ This repository is built upon prior work,s including:
 
 
 ```text
-@article{hu2025towards,
-  title={Towards versatile humanoid table tennis: Unified reinforcement learning with prediction augmentation},
-  author={Hu, Muqun and Chen, Wenxi and Li, Wenjing and Mandali, Falak and He, Zijian and Zhang, Renhong and Krisna, Praveen and Christian, Katherine and Benaharon, Leo and Ma, Dizhi and others},
-  journal={arXiv preprint arXiv:2509.21690},
-  year={2025}
+@misc{hu2026pacephysicsaugmentationcoordinated,
+      title={PACE: Physics Augmentation for Coordinated End-to-end Reinforcement Learning toward Versatile Humanoid Table Tennis}, 
+      author={Muqun Hu and Wenxi Chen and Wenjing Li and Falak Mandali and Zijian He and Renhong Zhang and Praveen Krisna and Katherine Christian and Leo Benaharon and Dizhi Ma and Karthik Ramani and Yan Gu},
+      year={2026},
+      eprint={2509.21690},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2509.21690}, 
 }
 ```
 
