@@ -121,6 +121,8 @@ Notes:
 
 ## Acknowledgements
 
+Research supported by the NVIDIA Academic Grant Program using an NVIDIA 8xH100 instance on Brev, NVIDIA Jetson AGX Thor Dev Kit, and NVIDIA RTX PRO 6000 Max-Q Workstation Edition. 
+
 This repository is built upon prior work,s including:
 
 - **[LeggedLab](https://github.com/Hellod035/LeggedLab)** – Built by Wandong Sun, this project provides the foundation and framework structure.  
