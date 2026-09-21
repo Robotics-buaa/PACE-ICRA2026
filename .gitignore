@@ -4,5 +4,6 @@
 .vscode
 outputs
 logs
+logs.bak/
 run_bash.sh
 wandb

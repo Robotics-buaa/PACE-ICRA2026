@@ -16,7 +16,7 @@ import numpy as np
 import torch
 from isaaclab.app import AppLauncher
 # Use the Isaac Lab adapter for RSL-RL to match the env API
-from rsl_rl.rsl_rl.runners import OnPolicyRunner
+from rsl_rl.runners import OnPolicyRunner
 # from isaaclab_rl.rsl_rl import OnPolicyRunner
 
 from legged_lab.utils import task_registry
@@ -35,6 +35,19 @@ parser.add_argument(
     "--record_action",
     action="store_true",
     help="Record observations and actions during play; also plots obs[48:69].",
+)
+parser.add_argument(
+    "--record_video",
+    action="store_true",
+    help="Record RGB frames during evaluation (works in --headless with --enable_cameras).",
+)
+parser.add_argument("--video_fps", type=int, default=25, help="Target frame rate of the recorded video.")
+parser.add_argument("--video_res", type=str, default="1280x720", help="Video resolution as WxH.")
+parser.add_argument(
+    "--max_video_frames",
+    type=int,
+    default=600,
+    help="Stop recording after this many frames (0 = record until eval ends).",
 )
 # parser.add_argument("--check", type=str, default='model_.*.pt', help="checkpoint, defaul the lastest")
 # parser.add_argument("--run", type=str, default='.*', help="experiment run name, defaul the latest run")
@@ -93,6 +106,41 @@ def play():
     env_class = task_registry.get_task_class(env_class_name)
     env = env_class(env_cfg, args_cli.headless)
 
+    # --- VIDEO RECORDING SETUP (headless offscreen) ---
+    record_video = bool(getattr(args_cli, "record_video", False))
+    rgb_rec = None
+    rep_module = None
+    video_frame_interval = 1
+    video_frames_written = 0
+    if record_video:
+        from legged_lab.utils.data_recorder.frame_recorder import FrameRecorder, ensure_world_camera
+        import omni.replicator.core as rep
+
+        rep_module = rep
+        try:
+            res_w, res_h = [int(x) for x in str(args_cli.video_res).lower().split("x")]
+        except Exception:
+            res_w, res_h = 1280, 720
+        camera_path = ensure_world_camera("/World/RecorderCam")
+        rgb_rec = FrameRecorder(
+            camera_prim_paths=[camera_path],
+            output_root="_recordings",
+            resolution=(res_w, res_h),
+        )
+        rgb_rec.start()
+        # Aim at the table + robot: side view from above
+        env.sim.set_camera_view([-2.0, 2.5, 2.0], [-0.2, 0.0, 0.5], camera_prim_path=camera_path)
+        # Map target fps to env control steps (control rate = 1 / (dt * decimation))
+        try:
+            ctrl_hz = 1.0 / (env_cfg.sim.dt * env_cfg.sim.decimation)
+        except Exception:
+            ctrl_hz = 50.0
+        video_frame_interval = max(1, int(round(ctrl_hz / max(1, args_cli.video_fps))))
+        print(
+            f"[INFO] Recording video: {res_w}x{res_h} @ ~{args_cli.video_fps}fps "
+            f"(1 frame every {video_frame_interval} steps) -> {rgb_rec.output_dir}"
+        )
+
     log_root_path = os.path.join("logs", agent_cfg.experiment_name)
     log_root_path = os.path.abspath(log_root_path)
     # agent_cfg.load_run=args_cli.run
@@ -106,7 +154,7 @@ def play():
 
     # Choose runner implementation
     if args_cli.predictor:
-        from rsl_rl.rsl_rl.runners import OnPolicyPredictorRegressionRunner
+        from rsl_rl.runners import OnPolicyPredictorRegressionRunner
         runner = OnPolicyPredictorRegressionRunner(env, agent_cfg.to_dict(), log_dir=log_dir, device=agent_cfg.device)
     else:
         runner = OnPolicyRunner(env, agent_cfg.to_dict(), log_dir=log_dir, device=agent_cfg.device)
@@ -328,6 +376,15 @@ def play():
                 except Exception:
                     pass
                 step_count += 1
+                # Capture a video frame at the configured interval
+                if record_video and rgb_rec is not None and rep_module is not None:
+                    if args_cli.max_video_frames <= 0 or video_frames_written < args_cli.max_video_frames:
+                        if step_count % video_frame_interval == 0:
+                            try:
+                                rep_module.orchestrator.step()
+                                video_frames_written += 1
+                            except Exception:
+                                pass
                 if step_count % 50 == 0:
                     succ_rate = (succ_total / serve_total) if serve_total > 0 else 0.0
                     hit_rate = (hit_total / serve_total) if serve_total > 0 else 0.0
@@ -352,6 +409,14 @@ def play():
                 print(f"[INFO] Saved obs/action records to: {npz_path}")
             except Exception as e:
                 print(f"[WARN] Failed to save recordings: {e}")
+
+        # Finalize video recording
+        if rgb_rec is not None:
+            try:
+                out_dir = rgb_rec.stop()
+                print(f"[INFO] Video frames saved to: {out_dir} ({video_frames_written} frames)")
+            except Exception as e:
+                print(f"[WARN] Failed to finalize video recording: {e}")
 
         # Save evaluation rows as CSV under checkpoint path (on exit)
         _save_eval_rows()
