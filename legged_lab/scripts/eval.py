@@ -131,9 +131,9 @@ def play():
         runner._predictor.to(orig_device)
     # Export policy in both JIT and ONNX formats
     export_policy_as_jit(runner.alg.policy, runner.obs_normalizer, path=export_model_dir, filename="policy.pt")
-    export_policy_as_onnx(
-        runner.alg.policy, normalizer=runner.obs_normalizer, path=export_model_dir, filename="policy.onnx"
-    )
+    # export_policy_as_onnx(
+    #     runner.alg.policy, normalizer=runner.obs_normalizer, path=export_model_dir, filename="policy.onnx"
+    # )
 
     if not args_cli.headless:
         from legged_lab.utils.keyboard import Keyboard

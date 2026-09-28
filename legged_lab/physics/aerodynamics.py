@@ -4,6 +4,7 @@
 import math
 import torch
 from typing import Literal, Optional, Tuple
+from isaaclab.utils.math import quat_rotate_inverse
 
 from legged_lab.physics.aero_model import (
     MeasuredAeroModel
@@ -90,6 +91,14 @@ class AeroForceField:
         self.last_torques_w = T_w.detach()
 
         # Expand to (num_envs, num_bodies=1, 3) and stage in GLOBAL frame
+        # ball_asset.set_external_force_and_torque(
+        #     forces=F_w.unsqueeze(1), torques=T_w.unsqueeze(1), is_global=True
+        # )
+        quat_w = ball_asset.data.root_quat_w
+        F_b = quat_rotate_inverse(quat_w, F_w)
+        T_b = quat_rotate_inverse(quat_w, T_w)
+
         ball_asset.set_external_force_and_torque(
-            forces=F_w.unsqueeze(1), torques=T_w.unsqueeze(1), is_global=True
+            forces=F_b.unsqueeze(1),
+            torques=T_b.unsqueeze(1),
         )
