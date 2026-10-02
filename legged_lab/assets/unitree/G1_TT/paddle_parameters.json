@@ -1,0 +1,18 @@
+{
+  "parent_body": "right_palm_link",
+  "paddle_body": "g1_paddle_link",
+  "parent_offset": [
+    0.2,
+    0.0,
+    0.0
+  ],
+  "normal": [
+    0,
+    1,
+    0
+  ],
+  "radius": 0.075,
+  "thickness": 0.01,
+  "mass": 0.16,
+  "source_usd": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Robots/Unitree/G1/g1.usd"
+}

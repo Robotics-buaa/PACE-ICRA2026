@@ -1,0 +1,144 @@
+"""PACE table-tennis configuration for Isaac Lab 2.1.0's built-in G1."""
+
+from copy import deepcopy
+from isaaclab.utils import configclass
+
+from legged_lab.assets.unitree.g1_tt import G1_TT_CFG
+from legged_lab.envs.t1_tt.t1_tt_config import (
+    T1TableTennisAgentCfg,
+    T1TableTennisEnvCfg,
+    T1TableTennisRewardCfg,
+    T1TT_EvalEnvCfg,
+)
+
+G1_CONTROL_JOINTS = [
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_pitch_joint",
+    "left_elbow_roll_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_pitch_joint",
+    "right_elbow_roll_joint",
+    "torso_joint",
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+]
+
+G1_HAND_JOINTS = [
+    f"{side}_{finger}_joint"
+    for side in ("left", "right")
+    for finger in ("zero", "one", "two", "three", "four", "five", "six")
+]
+
+
+def _make_g1_rewards():
+    reward = deepcopy(T1TableTennisRewardCfg())
+    feet = ".*_ankle_roll_link"
+
+    reward.energy_ankle.params["asset_cfg"].joint_names = [
+        ".*_ankle_pitch_joint", ".*_ankle_roll_joint"
+    ]
+    reward.undesired_contacts.params["sensor_cfg"].body_names = (
+        "(?!.*_ankle_roll_link).*"
+    )
+
+    for name in (
+        "fly", "hit_unstable_support", "feet_slide", "feet_force", "feet_stumble"
+    ):
+        getattr(reward, name).params["sensor_cfg"].body_names = feet
+
+    for name in ("feet_slide", "feet_too_near", "feet_really_too_near"):
+        getattr(reward, name).params["asset_cfg"].body_names = feet
+
+    reward.feet_orientation_L.params["asset_cfg"].body_names = "left_ankle_roll_link"
+    reward.feet_orientation_R.params["asset_cfg"].body_names = "right_ankle_roll_link"
+
+    reward.joint_deviation_hip.params["asset_cfg"].joint_names = [
+        ".*_hip_yaw_joint", ".*_hip_roll_joint"
+    ]
+    reward.joint_deviation_left_arms.params["asset_cfg"].joint_names = [
+        "left_shoulder_.*_joint", "left_elbow_.*_joint"
+    ]
+    reward.joint_deviation_left_shoulder_roll.params["asset_cfg"].joint_names = [
+        "left_shoulder_roll_joint"
+    ]
+    reward.joint_deviation_right_arms.params["asset_cfg"].joint_names = [
+        "right_shoulder_.*_joint", "right_elbow_.*_joint"
+    ]
+    reward.joint_deviation_torso.params["asset_cfg"].joint_names = ["torso_joint"]
+
+    # Restore with a verified G1 reference body during paddle integration.
+    reward.paddel_head_too_near = None
+    return reward
+
+
+@configclass
+class G1TableTennisEnvCfg(T1TableTennisEnvCfg):
+    reward = _make_g1_rewards()
+
+    def __post_init__(self):
+        super().__post_init__()
+
+        self.scene.robot = G1_TT_CFG.copy()
+        self.scene.height_scanner.prim_body_name = "torso_link"
+        self.robot.terminate_contacts_body_names = ["torso_link"]
+        self.robot.feet_body_names = [".*_ankle_roll_link"]
+
+        self.actions.joint_names = list(G1_CONTROL_JOINTS)
+        self.observations.joint_names = list(G1_CONTROL_JOINTS)
+        self.actions.preserve_order = True
+        self.observations.preserve_order = True
+        self.robot.num_actions = len(G1_CONTROL_JOINTS)
+
+        # Verify the total against the loaded articulation in the next step.
+        self.robot.num_joints = len(G1_CONTROL_JOINTS) + len(G1_HAND_JOINTS)
+
+        self.domain_rand.events.add_base_mass.params["asset_cfg"].body_names = [
+            "torso_link"
+        ]
+        self.domain_rand.events.reset_locomotion_joints.params[
+            "asset_cfg"
+        ].joint_names = [
+            "torso_joint",
+            ".*_hip_.*_joint",
+            ".*_knee_joint",
+            ".*_ankle_.*_joint",
+            "left_elbow_.*_joint",
+            "left_shoulder_.*_joint",
+        ]
+        self.domain_rand.events.reset_manipulation_joints.params[
+            "asset_cfg"
+        ].joint_names = [
+            "right_elbow_.*_joint", "right_shoulder_.*_joint"
+        ]
+
+
+@configclass
+class G1TT_EvalEnvCfg(G1TableTennisEnvCfg):
+    def __post_init__(self):
+        super().__post_init__()
+        reference = T1TT_EvalEnvCfg()
+        self.scene.max_episode_length_s = reference.scene.max_episode_length_s
+        self.domain_rand.events.reset_base = deepcopy(
+            reference.domain_rand.events.reset_base
+        )
+        self.ball = deepcopy(reference.ball)
+
+
+@configclass
+class G1TableTennisAgentCfg(T1TableTennisAgentCfg):
+    experiment_name: str = "g1_table_tennis"
+    resume: bool = False

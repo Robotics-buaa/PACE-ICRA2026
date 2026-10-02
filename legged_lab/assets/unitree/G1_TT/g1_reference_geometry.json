@@ -1,0 +1,13 @@
+{
+  "reference_base_height": 0.74,
+  "measured_paddle_offset_b": [
+    0.07471088320016861,
+    -0.2599705159664154,
+    -0.2868499755859375
+  ],
+  "ready_base_xy": [
+    -1.8,
+    0.3
+  ],
+  "paddle_offset_source": "loaded G1 default joint pose, before randomized reset"
+}

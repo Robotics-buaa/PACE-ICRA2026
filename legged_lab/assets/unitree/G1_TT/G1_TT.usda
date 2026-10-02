@@ -1,0 +1,85 @@
+#usda 1.0
+(
+    defaultPrim = "G1"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "G1" (
+    instanceable = false
+    prepend references = @http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Robots/Unitree/G1/g1.usd@
+)
+{
+    def Xform "g1_paddle_link" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (-0.0275, 0, 0)
+        float3 physics:diagonalInertia = (0.00017313, 0.00073552335, 0.00056777336)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 0.16
+        quatf physics:principalAxes = (1, 0, 0, 0)
+        bool physics:rigidBodyEnabled = 1
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.4139599472284317, -0.16207803785800934, 0.08491303771734238, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Cylinder "Head" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Y"
+            float3[] extent = [(-0.075, -0.005, -0.075), (0.075, 0.005, 0.075)]
+            double height = 0.01
+            rel material:binding:physics = </G1/PaddlePhysicsMaterial>
+            bool physics:collisionEnabled = 1
+            float physxCollision:contactOffset = 0.001
+            float physxCollision:restOffset = 0
+            color3f[] primvars:displayColor = [(0.75, 0.05, 0.03)]
+            double radius = 0.075
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+
+        def Cylinder "Handle" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.05, -0.013, -0.013), (0.05, 0.013, 0.013)]
+            double height = 0.1
+            rel material:binding:physics = </G1/PaddlePhysicsMaterial>
+            bool physics:collisionEnabled = 1
+            float physxCollision:contactOffset = 0.001
+            float physxCollision:restOffset = 0
+            color3f[] primvars:displayColor = [(0.25, 0.15, 0.08)]
+            double radius = 0.013
+            double3 xformOp:translate = (-0.11, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+    }
+
+    def Material "PaddlePhysicsMaterial" (
+        prepend apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+    )
+    {
+        float physics:dynamicFriction = 0.5
+        float physics:restitution = 0.8
+        float physics:staticFriction = 0.5
+        uniform token physxMaterial:frictionCombineMode = "min"
+        uniform token physxMaterial:restitutionCombineMode = "min"
+    }
+
+    def PhysicsFixedJoint "g1_paddle_fixed_joint"
+    {
+        rel physics:body0 = </G1/right_palm_link>
+        rel physics:body1 = </G1/g1_paddle_link>
+        bool physics:collisionEnabled = 0
+        uniform bool physics:excludeFromArticulation = 0
+        bool physics:jointEnabled = 1
+        point3f physics:localPos0 = (0.2, 0, 0)
+        point3f physics:localPos1 = (0, 0, 0)
+        quatf physics:localRot0 = (1, 0, 0, 0)
+        quatf physics:localRot1 = (1, 0, 0, 0)
+    }
+}
+
