@@ -36,12 +36,3 @@ from legged_lab.envs.g1_tt.g1_tt_config import (
 task_registry.register("g1_tt", G1TTEnv, G1TableTennisEnvCfg(), G1TableTennisAgentCfg())
 task_registry.register("g1_tt_eval", G1TTEnv, G1TT_EvalEnvCfg(), G1TableTennisAgentCfg())
 # END PACE G1 TASKS (step 6)
-
-# BEGIN PACE G1 WRIST TASKS
-from legged_lab.envs.g1_tt_wrist.g1_tt_wrist_env import G1WristTTEnv
-from legged_lab.envs.g1_tt_wrist.g1_tt_wrist_config import (
-    G1WristTableTennisEnvCfg, G1WristTT_EvalEnvCfg, G1WristTableTennisAgentCfg,
-)
-task_registry.register("g1_tt_wrist", G1WristTTEnv, G1WristTableTennisEnvCfg(), G1WristTableTennisAgentCfg())
-task_registry.register("g1_tt_wrist_eval", G1WristTTEnv, G1WristTT_EvalEnvCfg(), G1WristTableTennisAgentCfg())
-# END PACE G1 WRIST TASKS

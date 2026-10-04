@@ -1,0 +1,56 @@
+{
+  "source_usd": "/workspace/projects/PACE-ICRA2026/legged_lab/assets/unitree/G1_TT/G1_TT.usda",
+  "variant_usd": "/workspace/projects/PACE-ICRA2026/legged_lab/assets/unitree/G1_TT_WRIST/G1_TT_WRIST.usda",
+  "original": {
+    "joint_path": "/G1/right_elbow_roll_link/right_palm_joint",
+    "type": "PhysicsFixedJoint",
+    "body0": "/G1/right_elbow_roll_link",
+    "body1": "/G1/right_palm_link",
+    "local_pos0": [
+      0.11999999731779099,
+      0.0,
+      0.0
+    ],
+    "local_pos1": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "local_rot0_wxyz": [
+      0.7071067690849304,
+      0.0,
+      0.7071067690849304,
+      0.0
+    ],
+    "local_rot1_wxyz": [
+      0.7071067690849304,
+      0.0,
+      0.7071067690849304,
+      0.0
+    ]
+  },
+  "parent_body": "/G1/right_elbow_roll_link",
+  "palm_body": "/G1/right_palm_link",
+  "endpoints_swapped": false,
+  "zero_parent_to_palm_quat_wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "axis": "Z",
+  "axis_frame": "right_palm_link at zero joint angle",
+  "limits_deg": [
+    -90,
+    90
+  ],
+  "actuator": {
+    "stiffness": 20,
+    "damping": 1,
+    "effort_limit_sim": 8,
+    "velocity_limit_sim": 6,
+    "armature": 0.001
+  },
+  "note": "A simulated extra wrist DOF; parameter choices are test values, not hardware specifications.",
+  "asset_check_passed": true
+}
