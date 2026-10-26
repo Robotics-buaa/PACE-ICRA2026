@@ -1,0 +1,236 @@
+{
+  "cases": [
+    {
+      "case": "x=-1.60, serves",
+      "first_tilt_over_0_25_s": 1.36,
+      "first_non_timeout_reset_s": 2.08,
+      "first_episode_min_base_z": 0.48469409346580505,
+      "first_episode_max_tilt": 1.1406559944152832,
+      "pose_at_first_tilt": {
+        "base_z": 0.9566370248794556,
+        "pitch_rad": -0.25800156593322754,
+        "pelvis_minus_foot_link_mean_x": -0.12711262702941895,
+        "lower_joint_names": [
+          "left_hip_pitch_joint",
+          "left_knee_joint",
+          "left_ankle_pitch_joint",
+          "right_hip_pitch_joint",
+          "right_knee_joint",
+          "right_ankle_pitch_joint"
+        ],
+        "lower_joint_positions": [
+          -0.25947028398513794,
+          0.8002414703369141,
+          -0.29375410079956055,
+          -0.23739877343177795,
+          0.7642487287521362,
+          -0.2798232138156891
+        ],
+        "lower_joint_targets": [
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929,
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929
+        ],
+        "lower_joint_errors": [
+          0.020529717206954956,
+          0.24024146795272827,
+          -0.013754099607467651,
+          0.04260122776031494,
+          0.20424872636795044,
+          0.0001767873764038086
+        ],
+        "feet_forces_w": [
+          [
+            4.616890146280639e-05,
+            0.0,
+            343.62384033203125
+          ],
+          [
+            3.851321525871754e-05,
+            0.0,
+            286.6444396972656
+          ]
+        ]
+      }
+    },
+    {
+      "case": "x=-1.95, serves",
+      "first_tilt_over_0_25_s": 1.3800000000000001,
+      "first_non_timeout_reset_s": 2.12,
+      "first_episode_min_base_z": 0.46201008558273315,
+      "first_episode_max_tilt": 1.1583927869796753,
+      "pose_at_first_tilt": {
+        "base_z": 0.9572332501411438,
+        "pitch_rad": -0.2530796527862549,
+        "pelvis_minus_foot_link_mean_x": -0.12290748953819275,
+        "lower_joint_names": [
+          "left_hip_pitch_joint",
+          "left_knee_joint",
+          "left_ankle_pitch_joint",
+          "right_hip_pitch_joint",
+          "right_knee_joint",
+          "right_ankle_pitch_joint"
+        ],
+        "lower_joint_positions": [
+          -0.26004448533058167,
+          0.8008942604064941,
+          -0.2987455129623413,
+          -0.23698072135448456,
+          0.7629432678222656,
+          -0.28384897112846375
+        ],
+        "lower_joint_targets": [
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929,
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929
+        ],
+        "lower_joint_errors": [
+          0.01995551586151123,
+          0.24089425802230835,
+          -0.018745511770248413,
+          0.04301927983760834,
+          0.20294326543807983,
+          -0.0038489699363708496
+        ],
+        "feet_forces_w": [
+          [
+            4.6547203965019435e-05,
+            0.0,
+            346.439453125
+          ],
+          [
+            3.8860343920532614e-05,
+            0.0,
+            289.22802734375
+          ]
+        ]
+      }
+    },
+    {
+      "case": "x=-1.60, ball far away",
+      "first_tilt_over_0_25_s": 1.34,
+      "first_non_timeout_reset_s": 2.08,
+      "first_episode_min_base_z": 0.48141199350357056,
+      "first_episode_max_tilt": 1.1430379152297974,
+      "pose_at_first_tilt": {
+        "base_z": 0.9577827453613281,
+        "pitch_rad": -0.24960541725158691,
+        "pelvis_minus_foot_link_mean_x": -0.11999320983886719,
+        "lower_joint_names": [
+          "left_hip_pitch_joint",
+          "left_knee_joint",
+          "left_ankle_pitch_joint",
+          "right_hip_pitch_joint",
+          "right_knee_joint",
+          "right_ankle_pitch_joint"
+        ],
+        "lower_joint_positions": [
+          -0.25913622975349426,
+          0.7987672090530396,
+          -0.3009980022907257,
+          -0.237991064786911,
+          0.7641708850860596,
+          -0.2875582277774811
+        ],
+        "lower_joint_targets": [
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929,
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929
+        ],
+        "lower_joint_errors": [
+          0.020863771438598633,
+          0.23876720666885376,
+          -0.020998001098632812,
+          0.042008936405181885,
+          0.20417088270187378,
+          -0.007558226585388184
+        ],
+        "feet_forces_w": [
+          [
+            4.598060331773013e-05,
+            0.0,
+            342.2223815917969
+          ],
+          [
+            3.8545942516066134e-05,
+            0.0,
+            286.88800048828125
+          ]
+        ]
+      }
+    },
+    {
+      "case": "x=-1.95, ball far away",
+      "first_tilt_over_0_25_s": 1.3800000000000001,
+      "first_non_timeout_reset_s": 2.12,
+      "first_episode_min_base_z": 0.4642393887042999,
+      "first_episode_max_tilt": 1.1566967964172363,
+      "pose_at_first_tilt": {
+        "base_z": 0.957298755645752,
+        "pitch_rad": -0.2526571750640869,
+        "pelvis_minus_foot_link_mean_x": -0.12257957458496094,
+        "lower_joint_names": [
+          "left_hip_pitch_joint",
+          "left_knee_joint",
+          "left_ankle_pitch_joint",
+          "right_hip_pitch_joint",
+          "right_knee_joint",
+          "right_ankle_pitch_joint"
+        ],
+        "lower_joint_positions": [
+          -0.260040819644928,
+          0.800785481929779,
+          -0.29905739426612854,
+          -0.23701709508895874,
+          0.7628462910652161,
+          -0.2841297388076782
+        ],
+        "lower_joint_targets": [
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929,
+          -0.2800000011920929,
+          0.5600000023841858,
+          -0.2800000011920929
+        ],
+        "lower_joint_errors": [
+          0.019959181547164917,
+          0.24078547954559326,
+          -0.019057393074035645,
+          0.042982906103134155,
+          0.20284628868103027,
+          -0.004129737615585327
+        ],
+        "feet_forces_w": [
+          [
+            4.638141399482265e-05,
+            0.0,
+            345.20550537109375
+          ],
+          [
+            3.856404509861022e-05,
+            0.0,
+            287.02276611328125
+          ]
+        ]
+      }
+    }
+  ],
+  "requested_seconds": 6.0,
+  "neutral_actions": true,
+  "model_loaded": false,
+  "learning_iterations": 0,
+  "gains_and_default_joint_pose_changed": false,
+  "fixture_material_randomization_disabled": true,
+  "baseline_source_verified": true,
+  "scope": "neutral stance comparison with pre-reset observations; no trained balance performance or automatic parameter fix"
+}

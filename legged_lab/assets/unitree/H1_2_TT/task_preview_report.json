@@ -1,0 +1,14 @@
+{
+  "neutral_actions": true,
+  "trained_policy_loaded": false,
+  "fixed_base": false,
+  "gravity_disabled": false,
+  "simulation_seconds": 30.0,
+  "requested_seconds": 30.0,
+  "reference_base_height": 0.9990442317426205,
+  "minimum_observed_base_height": 0.5330015420913696,
+  "maximum_observed_tilt_rad": 1.1271140575408936,
+  "non_timeout_resets": 14,
+  "timeout_resets": 0,
+  "scope": "neutral-pose GUI/physics preview; visual acceptance and learned policy performance are separate"
+}

@@ -1,0 +1,32 @@
+{
+  "version": "h1_2_standing_v1_stage1",
+  "revision": "optional_distributed_fix_1",
+  "training_started_by_codex": false,
+  "budget": {
+    "num_envs": 512,
+    "iterations": 500,
+    "num_steps_per_env": 24,
+    "seed": 42
+  },
+  "required_source_sha256": {
+    "legged_lab/envs/h1_2_tt/h1_2_tt_env.py": "bafa249748acc992832a0fa0a76ff80ab58ec7adbc92b75d871ec039eb9d9d02",
+    "legged_lab/envs/base/tt_env.py": "34f92afd1c565d386d10f9bf2c0f64fa215aa8679edf9e2e3d373021d864c728",
+    "legged_lab/envs/h1_2_tt/h1_2_tt_config.py": "4eacb07ae5b2f4abaf9b0f686b99c71d13bb18e172af92069025cab853cc5329",
+    "legged_lab/scripts/train.py": "54a7b4c871af0f4e35c9b7d46db1f8524fd095cb168234968093ba14a62e244f",
+    "legged_lab/envs/g1_tt/g1_tt_config.py": "4a9eef5b1e275549d1b9fec4d393a62be49fffa64bb2b9c4b742085bbe6ec4db",
+    "rsl_rl/rsl_rl/runners/on_policy_runner.py": "f89a7a89860111484ce76fe6f102dd176143397511adb17e82a852841f1894fa",
+    "rsl_rl/rsl_rl/runners/__init__.py": "07e659e6e2d21923dc9363295804ea85876738bbb394a26c6259b7ea559357f6",
+    "tools/h1_2/standing_v1/__init__.py": "56ebed07df0f7f576e42ebeb36fe65390e374da430a51b543d8edc76b060cbe5",
+    "tools/h1_2/standing_v1/task.py": "b8bf0805484dc603885a939c09bedc901bf63d4a224108ddec0e8ea472cf89b2",
+    "tools/h1_2/standing_v1/check.py": "59fb3e51654c249d22280416edd558085d7d40dd1b74da1c1185336a70be7de4",
+    "tools/h1_2/standing_v1/README.md": "685a97ec5045e2624210748960e6fe141480b5942b9f8d6d552dd1e95bf68af6",
+    "tools/h1_2/standing_v1/bundle_manifest.json": "40676399b2efaa2e0cf38998cc73c89a77b3f76039095388e84972fa759b5854"
+  },
+  "files_sha256": {
+    "common.py": "db200e3677b9c399886feb686c036c57a7730cd92a64fd21058ca347d5663ad4",
+    "metrics.py": "e8334a6ed3cae3fa3a4a652f59472c8396edd418476682dc4e7a9da6506bad42",
+    "train.py": "901d6a1cfa1b61be862c26de82a97ad51c9b3fd5ed63ef7f3441975ef31bcc30",
+    "evaluate.py": "3f866b9b6e9d345bba4e820ae9ef7a4c344dfe4b5002753afc4b7524840be39e",
+    "README.md": "a622ca2dfa55b2022a0b7682ba0f31f52c224bc06cbb45849287b239e0f2c6c0"
+  }
+}

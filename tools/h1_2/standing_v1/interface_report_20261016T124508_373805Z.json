@@ -1,0 +1,46 @@
+{
+  "interface_passed": true,
+  "learning_updates": 0,
+  "model_loaded": false,
+  "stance_performance": "not tested; eight steps cannot establish standing skill",
+  "steps": 8,
+  "num_envs": 2,
+  "runtime_lower_kp": [
+    200.0,
+    200.0,
+    60.0,
+    200.0,
+    200.0,
+    60.0
+  ],
+  "reward_weights": {
+    "standing_height": 4.0,
+    "standing_upright": 3.0,
+    "standing_quiet": 2.0,
+    "standing_anchor": 2.0,
+    "standing_support": 1.0,
+    "upper_ready_pose": -0.5,
+    "foot_motion": -2.0,
+    "estimated_effort_pressure": -2.0,
+    "applied_action_rate": -0.05,
+    "impossible_target_request": -1.0,
+    "joint_margin": -2.0,
+    "standing_failure": -50.0
+  },
+  "reference_base_height_m": 0.9990442317426205,
+  "actor_shape": [
+    2,
+    495
+  ],
+  "critic_shape": [
+    2,
+    580
+  ],
+  "selective_reset_checked": true,
+  "serve_counter_ignored": true,
+  "original_tasks_and_files_preserved": true,
+  "height_gate_current": [
+    1.0,
+    1.0
+  ]
+}

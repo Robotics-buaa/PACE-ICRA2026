@@ -1,0 +1,42 @@
+{
+  "protected_sha256": {
+    "legged_lab/envs/g1_tt/g1_tt_config.py": "4a9eef5b1e275549d1b9fec4d393a62be49fffa64bb2b9c4b742085bbe6ec4db",
+    "legged_lab/envs/g1_tt/g1_tt_env.py": "dddcd464ed1728c5990a88c1a44eeccfc91dc5fe95bac2fa56719710c0fc959f",
+    "legged_lab/envs/base/tt_env.py": "34f92afd1c565d386d10f9bf2c0f64fa215aa8679edf9e2e3d373021d864c728",
+    "legged_lab/envs/t1_tt/t1_tt_config.py": "9e13e7288cbe5566e64df6de58a40cdf8910b51f451832fec146142b08592442",
+    "legged_lab/utils/task_registry.py": "6c2dcd8bfc5bfd82baa4de589ae0316f3daa8cd380fd92b28396e27bbe93cf80",
+    "legged_lab/physics/aerodynamics.py": "72b12c98437b481919928754cab75bcd20411a6aebf3db9325382be829e64d19",
+    "legged_lab/mdp/rewards.py": "6cacc5baf3c23d9f10317fdbc3196e0646b1684fc7809e93c506ce9630fc1f93",
+    "legged_lab/assets/unitree/g1_tt.py": "b5171a07cb6f25c1810068ce14b287dfc52130063235012e6db17ebb18a2f7a0",
+    "legged_lab/assets/unitree/g1_tt_wrist.py": "eee9dccf273e70d83138d776c8715bea15a786ac502855e7d91bac9f38ef9023",
+    "legged_lab/assets/unitree/G1_TT/G1_TT.usda": "0079180ff8916258d24d42f179e0de43c7f38e940c0717c28066d54842dcdfd5",
+    "legged_lab/assets/unitree/G1_TT_WRIST/G1_TT_WRIST.usda": "46d6bef51d98b957c2f4d09d353bd008e010723be480cf978c81e4ab990443ad",
+    "legged_lab/envs/g1_tt_wrist/g1_tt_wrist_config.py": "d689f04acf98815c1bd3ca20622f2f196f9c502d3249f613fdc69cfffc384530",
+    "legged_lab/envs/g1_tt_wrist/g1_tt_wrist_env.py": "1593341eba8fd88c773493a9e5a35919449d6e2e672e4ecef41b3442db3c5434",
+    "legged_lab/assets/unitree/h1_2_tt.py": "603586da16abbe79d354cffa352a8a67ccc9d74dfefc874c8f9bffec6d8aeb29",
+    "legged_lab/assets/unitree/H1_2_BASE/H1_2.usd": "9e56da0b5b620e0da413d9c44e88cc1476881c1049ca2a0214dcb230865c355a",
+    "legged_lab/assets/unitree/H1_2_TT/H1_2_TT.usda": "4019faa67c93bafbf53f54ee5a56008b9afe0549753f6c3b5fb151c4eea4b327"
+  },
+  "new_files_sha256": {
+    "legged_lab/envs/h1_2_tt/__init__.py": "31ec354e07c512478d24a5f9778d50af710f66d0280a8c32e8b409081e518da8",
+    "legged_lab/envs/h1_2_tt/h1_2_tt_config.py": "4eacb07ae5b2f4abaf9b0f686b99c71d13bb18e172af92069025cab853cc5329",
+    "legged_lab/envs/h1_2_tt/h1_2_tt_env.py": "bafa249748acc992832a0fa0a76ff80ab58ec7adbc92b75d871ec039eb9d9d02",
+    "tools/h1_2/check_h1_2_task.py": "fabe63bd591bdd726010cf2f81a034e7e5bedcd68d43950aba5d51e9f39a44ff"
+  },
+  "source_sha256_normalized": {
+    "legged_lab/envs/g1_tt/g1_tt_config.py": "4a9eef5b1e275549d1b9fec4d393a62be49fffa64bb2b9c4b742085bbe6ec4db",
+    "legged_lab/envs/g1_tt/g1_tt_env.py": "8276d1a4c895815cb0439ca496afb790187f22523d8c4a7d4e6f7319b1921ee2",
+    "legged_lab/envs/__init__.py": "cad787e0010952b005767d8ac311901fc9415fe1e3ce028fdd40284458089877",
+    "legged_lab/envs/base/tt_env.py": "99479705af66d7652d011f9dd078ac8df0c1439cc1e576f3ed0ac3189241a0e0",
+    "legged_lab/envs/t1_tt/t1_tt_config.py": "512b960cc487d36605aac6dc2fef8c74c4098eb249799dae74e4ecef688dcc86",
+    "legged_lab/utils/task_registry.py": "6c2dcd8bfc5bfd82baa4de589ae0316f3daa8cd380fd92b28396e27bbe93cf80"
+  },
+  "registration_backup": "/workspace/projects/PACE-ICRA2026/tools/h1_2/backups/envs_init_20261014_180957_699575.py",
+  "tasks": [
+    "h1_2_tt",
+    "h1_2_tt_eval"
+  ],
+  "experiment_name": "h1_2_table_tennis",
+  "head_distance_reward_disabled": true,
+  "task_simulation_check": "pending"
+}

@@ -34,6 +34,9 @@ class G1WristTT_EvalEnvCfg(G1TT_EvalEnvCfg):
         super().__post_init__()
         _configure_wrist(self)
 
+        # 固定发球 y 方向初速度，单位 m/s
+        self.ball.ball_speed_y_range = (0.4, 0.4)
+
 
 @configclass
 class G1WristTableTennisAgentCfg(G1TableTennisAgentCfg):

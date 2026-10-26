@@ -1,0 +1,38 @@
+{
+  "task": "h1_2_hitting_ready_v1",
+  "revision": "ready_reset_1",
+  "remote_simulator_validation": "pending",
+  "training_started_by_local_agent": false,
+  "required_files_sha256": {
+    "tools/h1_2/standing_v1_stage1/manifest.json": "a8eda919d1e9720376dc23735b3e5051f9feb08fcdad4a242157acbf6b5a97d5",
+    "tools/h1_2/standing_v1_stage1/common.py": "db200e3677b9c399886feb686c036c57a7730cd92a64fd21058ca347d5663ad4",
+    "tools/h1_2/standing_v1_stage1/metrics.py": "e8334a6ed3cae3fa3a4a652f59472c8396edd418476682dc4e7a9da6506bad42",
+    "tools/h1_2/standing_v1_stage1/train.py": "901d6a1cfa1b61be862c26de82a97ad51c9b3fd5ed63ef7f3441975ef31bcc30",
+    "tools/h1_2/standing_v1_stage1/evaluate.py": "3f866b9b6e9d345bba4e820ae9ef7a4c344dfe4b5002753afc4b7524840be39e",
+    "tools/h1_2/standing_v1_stage1/README.md": "a622ca2dfa55b2022a0b7682ba0f31f52c224bc06cbb45849287b239e0f2c6c0",
+    "tools/h1_2/standing_arm_hold_v1/manifest.json": "2b1fa3109f0028841fee58fc7f3fc8a963ec383fcd9d778010e32723923cb051",
+    "tools/h1_2/standing_arm_hold_v1/probe.py": "5588805ab1d25a70cd7549694c4660203e887d265d43ff1b121074888a64ee65",
+    "tools/h1_2/standing_arm_hold_v1/quiet_metrics.py": "38c72abd7dd08f77bdb3d664ad868b0ab43f83aa734de84480ac004e0a359609",
+    "tools/h1_2/standing_arm_hold_v1/README.md": "11b31ec5429cc0eedb4397bdd3e56d36ecc1c4e79f6622bdb50f9b442d5b96b2",
+    "tools/h1_2/hitting_balance_v1/manifest.json": "dd3c6aa50b404052d027765d005c8262bf55be95e96c1e422ab04c549ad5a649",
+    "tools/h1_2/hitting_balance_v1/probe.py": "7a170326eb388d2dae3bbd44f15d2d6240853c8f31376466b0b03aee6c751e71",
+    "tools/h1_2/hitting_balance_v1/logic.py": "feb5fe979f6121ba3e346712daa475f7741ff55f918693317754b6e260876eeb",
+    "tools/h1_2/hitting_balance_v1/README.md": "5046030f9ec2583adc8602a9d39236bf60fd375d224901b9ce7937c2b8e1c688",
+    "tools/h1_2/hitting_front_v1/probe.py": "451887b6522226dd2ed1da3b8494e134be9e691fb3ce1bcb8e529a1ea2713d0a",
+    "tools/h1_2/hitting_front_v1/logic.py": "003bd54d4d436ebc1165d593d02d311574f01937ef7520f2fdf84affab410b01",
+    "tools/h1_2/hitting_front_v1/guard.py": "f5e61cd16405953bb02d15a0e8c730bedbf3eb8584498b82e2d94056d3864838",
+    "tools/h1_2/hitting_front_v1/runtime.py": "f819d40eafd2bd5e00216c44026f071fd2799d37d7eaa537a8dd72c0c06722ef",
+    "tools/h1_2/hitting_front_v1/collider_completion.py": "2c53ae82be320dd9bdb2f8ab17bded1200b2d61fa6ce015ca5ea99c29cec8b4a",
+    "tools/h1_2/hitting_front_v1/ready_pose.py": "0ee84b95508b0ea0a288c886aa852fb64f5453ec8324d13731c21330693450bf",
+    "tools/h1_2/hitting_front_v1/README.md": "b803a16c75eea1ad0bbadcb1e3eba4fdabc27ab145c304a452dfbc43dd048850",
+    "tools/h1_2/hitting_front_v1/manifest.json": "39d37abd71d5b4eba338f01d63ab47209dc85c077e47d8a4b549055e95d4d476"
+  },
+  "files_sha256": {
+    "batch_geometry.py": "dea02d129cf84bdbf0fa3ad662fb0c43f3f6683184caed6bf539a5c1dfd5e9b8",
+    "paths.py": "77591842bc8a03ab64ea0217dcccb9f3331fb28a2a368615e8469be81c908aee",
+    "README.md": "a27b694006540e8d1de22dbbf2e6593b77c6272bdf9cdaa45fe3c4dae85d37c3",
+    "run.py": "87da605f80ec5adc609782e5ecebcc586901ec12d17e2e702349f9d7e2774f20",
+    "scene_audit.py": "9cc640ee53f6a5d0c8c5994690b495963b5ec613c15927083da2b9d5efafdecf",
+    "task.py": "afd6ab6871a6d078094bb4f7986e0944398effdadc5a6a86eb6bd5cdd9bf9833"
+  }
+}

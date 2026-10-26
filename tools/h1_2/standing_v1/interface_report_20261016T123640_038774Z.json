@@ -1,0 +1,8 @@
+{
+  "interface_passed": false,
+  "learning_updates": 0,
+  "model_loaded": false,
+  "stance_performance": "not tested; eight steps cannot establish standing skill",
+  "error": "AttributeError(\"'H1_2StandV1Env' object has no attribute 'paddle_pos'\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/projects/PACE-ICRA2026/tools/h1_2/standing_v1/check.py\", line 53, in <module>\n    env = task_registry.get_task_class('h1_2_stand_v1')(cfg, args.headless)\n  File \"/workspace/projects/PACE-ICRA2026/legged_lab/envs/base/tt_env.py\", line 216, in __init__\n    self.init_buffers()\n  File \"/workspace/projects/PACE-ICRA2026/tools/h1_2/standing_v1/task.py\", line 142, in init_buffers\n    super().init_buffers()\n  File \"/workspace/projects/PACE-ICRA2026/legged_lab/envs/h1_2_tt/h1_2_tt_env.py\", line 49, in init_buffers\n    super().init_buffers()\n  File \"/workspace/projects/PACE-ICRA2026/legged_lab/envs/base/tt_env.py\", line 349, in init_buffers\n    self.init_obs_buffer()\n  File \"/workspace/projects/PACE-ICRA2026/legged_lab/envs/h1_2_tt/h1_2_tt_env.py\", line 33, in init_obs_buffer\n    actor_obs, _ = self.compute_current_observations()\n  File \"/workspace/projects/PACE-ICRA2026/tools/h1_2/standing_v1/task.py\", line 195, in compute_current_observations\n    return self.standing_observations(*super().compute_current_observations())\n  File \"/workspace/projects/PACE-ICRA2026/tools/h1_2/standing_v1/task.py\", line 186, in standing_observations\n    critic[:, 96:99] = self.paddle_pos * self.obs_scales.ball_pos\nAttributeError: 'H1_2StandV1Env' object has no attribute 'paddle_pos'\n"
+}

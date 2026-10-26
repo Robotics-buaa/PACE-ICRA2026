@@ -1,0 +1,74 @@
+{
+  "bilateral_interface_passed": true,
+  "sampled_serves": 1024,
+  "negative_y_count": 512,
+  "positive_y_count": 512,
+  "apex_min": [
+    -1.849970817565918,
+    -0.39924710988998413,
+    1.0643450021743774
+  ],
+  "apex_max": [
+    -1.65027916431427,
+    0.39997777342796326,
+    1.130569338798523
+  ],
+  "landing_min": [
+    -0.9308079481124878,
+    -0.30033472180366516
+  ],
+  "landing_max": [
+    -0.7556759119033813,
+    0.30375179648399353
+  ],
+  "velocity_min": [
+    -6.1184492111206055,
+    -0.6498056650161743,
+    1.5005520582199097
+  ],
+  "velocity_max": [
+    -5.003251552581787,
+    0.6489174365997314,
+    1.9995527267456055
+  ],
+  "actor": [
+    495,
+    27
+  ],
+  "critic": [
+    580,
+    1
+  ],
+  "predictor": [
+    15,
+    3
+  ],
+  "table_root_env": [
+    [
+      -2.9802322387695312e-05,
+      9.5367431640625e-07,
+      0.0005407333374023438
+    ],
+    [
+      -2.9802322387695312e-05,
+      9.5367431640625e-07,
+      0.0005407333374023438
+    ],
+    [
+      -3.0040740966796875e-05,
+      9.5367431640625e-07,
+      0.00054168701171875
+    ],
+    [
+      -3.0040740966796875e-05,
+      9.5367431640625e-07,
+      0.00054168701171875
+    ]
+  ],
+  "ball_frame": "environment",
+  "base_target_frame": "table rigid-body root",
+  "learning_iterations": 0,
+  "control_steps": 24,
+  "baseline_hashes_verified": true,
+  "scope": "approximate serve geometry and task interfaces; no measured landing/hit rate, backhand skill or reachability guarantee"
+}

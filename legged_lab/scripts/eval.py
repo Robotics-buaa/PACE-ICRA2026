@@ -90,6 +90,11 @@ def play():
     agent_cfg = update_rsl_rl_cfg(agent_cfg, args_cli)
     env_cfg.scene.seed = agent_cfg.seed
 
+    print("[DEBUG] 初始位置:", env_cfg.scene.robot.init_state.pos)
+    print("[DEBUG] 重置位置范围:",
+      env_cfg.domain_rand.events.reset_base.params["pose_range"])
+    print("[DEBUG] 准备站位:", env_cfg.ready_base_xy)
+
     env_class = task_registry.get_task_class(env_class_name)
     env = env_class(env_cfg, args_cli.headless)
 

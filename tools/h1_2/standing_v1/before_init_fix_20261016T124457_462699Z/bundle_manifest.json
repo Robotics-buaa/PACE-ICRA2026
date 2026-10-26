@@ -1,0 +1,15 @@
+{
+  "version": "h1_2_standing_v1",
+  "training_authorized_or_started": false,
+  "files_sha256": {
+    "__init__.py": "56ebed07df0f7f576e42ebeb36fe65390e374da430a51b543d8edc76b060cbe5",
+    "task.py": "31aa933230cf17de0da6d5eddeb71623a141f5b328641dae26652a750f186b16",
+    "check.py": "05f36b10f0d3710bdc421f9a0fd1ae8c10067b9d59d7bb5adcf2394759e26124",
+    "README.md": "685a97ec5045e2624210748960e6fe141480b5942b9f8d6d552dd1e95bf68af6"
+  },
+  "required_source_sha256": {
+    "legged_lab/envs/h1_2_tt/h1_2_tt_env.py": "bafa249748acc992832a0fa0a76ff80ab58ec7adbc92b75d871ec039eb9d9d02",
+    "legged_lab/envs/base/tt_env.py": "34f92afd1c565d386d10f9bf2c0f64fa215aa8679edf9e2e3d373021d864c728",
+    "legged_lab/envs/h1_2_tt/h1_2_tt_config.py": "4eacb07ae5b2f4abaf9b0f686b99c71d13bb18e172af92069025cab853cc5329"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "prepare": {
+    "mode": "static_kinematic_calibration",
+    "length_unit": "m",
+    "angle_unit": "rad",
+    "paddle_position_b": [
+      0.19329258799552917,
+      0.21440894901752472,
+      0.16994477808475494
+    ],
+    "paddle_normal_b": [
+      -0.7605215311050415,
+      -0.1666458398103714,
+      0.6275641918182373
+    ],
+    "paddle_position_heading": [
+      0.193292498588562,
+      0.21440884470939636,
+      0.16994470357894897
+    ],
+    "paddle_normal_heading": [
+      -0.7605211734771729,
+      -0.16664576530456543,
+      0.6275638937950134
+    ],
+    "paddle_position_w": [
+      -1.406707525253296,
+      0.21440884470939636,
+      0.9099447727203369
+    ],
+    "root_position_w": [
+      -1.600000023841858,
+      0.0,
+      0.7400000691413879
+    ],
+    "root_quaternion_wxyz": [
+      1.0000001192092896,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "adjustable_joints_rad": {
+      "right_shoulder_pitch_joint": -0.6899999976158142,
+      "right_shoulder_roll_joint": -0.25,
+      "right_shoulder_yaw_joint": 1.1399999856948853,
+      "right_elbow_pitch_joint": 0.09999999403953552,
+      "right_elbow_roll_joint": 1.459999918937683,
+      "right_palm_joint": 0.4399999976158142,
+      "torso_joint": 0.05999999865889549
+    },
+    "all_joints_rad": {
+      "left_hip_pitch_joint": -0.20000000298023224,
+      "right_hip_pitch_joint": -0.20000000298023224,
+      "torso_joint": 0.05999999865889549,
+      "left_hip_roll_joint": 0.0,
+      "right_hip_roll_joint": 0.0,
+      "left_shoulder_pitch_joint": 0.3499999940395355,
+      "right_shoulder_pitch_joint": -0.6899999976158142,
+      "left_hip_yaw_joint": 0.0,
+      "right_hip_yaw_joint": 0.0,
+      "left_shoulder_roll_joint": 0.1599999964237213,
+      "right_shoulder_roll_joint": -0.25,
+      "left_knee_joint": 0.41999998688697815,
+      "right_knee_joint": 0.41999998688697815,
+      "left_shoulder_yaw_joint": 0.0,
+      "right_shoulder_yaw_joint": 1.1399999856948853,
+      "left_ankle_pitch_joint": -0.23000000417232513,
+      "right_ankle_pitch_joint": -0.23000000417232513,
+      "left_elbow_pitch_joint": 0.8700000047683716,
+      "right_elbow_pitch_joint": 0.09999999403953552,
+      "left_ankle_roll_joint": 0.0,
+      "right_ankle_roll_joint": 0.0,
+      "left_elbow_roll_joint": 0.0,
+      "right_elbow_roll_joint": 1.459999918937683,
+      "right_palm_joint": 0.4399999976158142,
+      "left_five_joint": 0.0,
+      "left_three_joint": 0.0,
+      "left_zero_joint": 0.0,
+      "right_five_joint": 0.0,
+      "right_three_joint": 0.0,
+      "right_zero_joint": 0.0,
+      "left_six_joint": 0.0,
+      "left_four_joint": 0.0,
+      "left_one_joint": 1.0,
+      "right_six_joint": 0.0,
+      "right_four_joint": 0.0,
+      "right_one_joint": -1.0,
+      "left_two_joint": 0.5199999809265137,
+      "right_two_joint": -0.5199999809265137
+    }
+  },
+  "impact": {
+    "mode": "static_kinematic_calibration",
+    "length_unit": "m",
+    "angle_unit": "rad",
+    "paddle_position_b": [
+      0.3133369982242584,
+      0.10451268404722214,
+      0.3272983729839325
+    ],
+    "paddle_normal_b": [
+      -0.9899322390556335,
+      0.1281360387802124,
+      -0.06013389676809311
+    ],
+    "paddle_position_heading": [
+      0.3133368492126465,
+      0.10451263189315796,
+      0.32729822397232056
+    ],
+    "paddle_normal_heading": [
+      -0.9899317622184753,
+      0.12813597917556763,
+      -0.06013386696577072
+    ],
+    "paddle_position_w": [
+      -1.2866631746292114,
+      0.10451263189315796,
+      1.0672982931137085
+    ],
+    "root_position_w": [
+      -1.600000023841858,
+      0.0,
+      0.7400000691413879
+    ],
+    "root_quaternion_wxyz": [
+      1.0000001192092896,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "adjustable_joints_rad": {
+      "right_shoulder_pitch_joint": -1.25,
+      "right_shoulder_roll_joint": -0.75,
+      "right_shoulder_yaw_joint": 0.9599999785423279,
+      "right_elbow_pitch_joint": 0.10999999940395355,
+      "right_elbow_roll_joint": 1.4499999284744263,
+      "right_palm_joint": 0.5600000023841858,
+      "torso_joint": 0.0
+    },
+    "all_joints_rad": {
+      "left_hip_pitch_joint": -0.20000000298023224,
+      "right_hip_pitch_joint": -0.20000000298023224,
+      "torso_joint": 0.0,
+      "left_hip_roll_joint": 0.0,
+      "right_hip_roll_joint": 0.0,
+      "left_shoulder_pitch_joint": 0.3499999940395355,
+      "right_shoulder_pitch_joint": -1.25,
+      "left_hip_yaw_joint": 0.0,
+      "right_hip_yaw_joint": 0.0,
+      "left_shoulder_roll_joint": 0.1599999964237213,
+      "right_shoulder_roll_joint": -0.75,
+      "left_knee_joint": 0.41999998688697815,
+      "right_knee_joint": 0.41999998688697815,
+      "left_shoulder_yaw_joint": 0.0,
+      "right_shoulder_yaw_joint": 0.9599999785423279,
+      "left_ankle_pitch_joint": -0.23000000417232513,
+      "right_ankle_pitch_joint": -0.23000000417232513,
+      "left_elbow_pitch_joint": 0.8700000047683716,
+      "right_elbow_pitch_joint": 0.10999999940395355,
+      "left_ankle_roll_joint": 0.0,
+      "right_ankle_roll_joint": 0.0,
+      "left_elbow_roll_joint": 0.0,
+      "right_elbow_roll_joint": 1.4499999284744263,
+      "right_palm_joint": 0.5600000023841858,
+      "left_five_joint": 0.0,
+      "left_three_joint": 0.0,
+      "left_zero_joint": 0.0,
+      "right_five_joint": 0.0,
+      "right_three_joint": 0.0,
+      "right_zero_joint": 0.0,
+      "left_six_joint": 0.0,
+      "left_four_joint": 0.0,
+      "left_one_joint": 1.0,
+      "right_six_joint": 0.0,
+      "right_four_joint": 0.0,
+      "right_one_joint": -1.0,
+      "left_two_joint": 0.5199999809265137,
+      "right_two_joint": -0.5199999809265137
+    }
+  }
+}

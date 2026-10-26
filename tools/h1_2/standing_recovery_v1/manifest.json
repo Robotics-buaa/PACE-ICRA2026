@@ -1,0 +1,10 @@
+{
+  "version": "standing_recovery_v1",
+  "learning_updates": 0,
+  "required_stage1_manifest_sha256": "a8eda919d1e9720376dc23735b3e5051f9feb08fcdad4a242157acbf6b5a97d5",
+  "files_sha256": {
+    "probe.py": "01813e7ca9bb5b7669db2584fd21fc5b9ae2e57f33c1fd47d10a9b02ba58954b",
+    "recovery_metrics.py": "57c70fea057d11c5f67e2a70fe3dfdb7d6b03e77d084dcb48195ce8cb9aa226b",
+    "README.md": "feb199480636bdc7533df5d5bd091e15d41d2d566cae19990c68b145d49ab263"
+  }
+}

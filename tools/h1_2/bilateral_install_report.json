@@ -1,0 +1,41 @@
+{
+  "protected_sha256": {
+    "legged_lab/envs/g1_tt/g1_tt_config.py": "4a9eef5b1e275549d1b9fec4d393a62be49fffa64bb2b9c4b742085bbe6ec4db",
+    "legged_lab/envs/g1_tt/g1_tt_env.py": "dddcd464ed1728c5990a88c1a44eeccfc91dc5fe95bac2fa56719710c0fc959f",
+    "legged_lab/envs/base/tt_env.py": "34f92afd1c565d386d10f9bf2c0f64fa215aa8679edf9e2e3d373021d864c728",
+    "legged_lab/envs/t1_tt/t1_tt_config.py": "9e13e7288cbe5566e64df6de58a40cdf8910b51f451832fec146142b08592442",
+    "legged_lab/utils/task_registry.py": "6c2dcd8bfc5bfd82baa4de589ae0316f3daa8cd380fd92b28396e27bbe93cf80",
+    "legged_lab/physics/aerodynamics.py": "72b12c98437b481919928754cab75bcd20411a6aebf3db9325382be829e64d19",
+    "legged_lab/mdp/rewards.py": "6cacc5baf3c23d9f10317fdbc3196e0646b1684fc7809e93c506ce9630fc1f93",
+    "legged_lab/assets/unitree/g1_tt.py": "b5171a07cb6f25c1810068ce14b287dfc52130063235012e6db17ebb18a2f7a0",
+    "legged_lab/assets/unitree/g1_tt_wrist.py": "eee9dccf273e70d83138d776c8715bea15a786ac502855e7d91bac9f38ef9023",
+    "legged_lab/assets/unitree/G1_TT/G1_TT.usda": "0079180ff8916258d24d42f179e0de43c7f38e940c0717c28066d54842dcdfd5",
+    "legged_lab/assets/unitree/G1_TT_WRIST/G1_TT_WRIST.usda": "46d6bef51d98b957c2f4d09d353bd008e010723be480cf978c81e4ab990443ad",
+    "legged_lab/envs/g1_tt_wrist/g1_tt_wrist_config.py": "d689f04acf98815c1bd3ca20622f2f196f9c502d3249f613fdc69cfffc384530",
+    "legged_lab/envs/g1_tt_wrist/g1_tt_wrist_env.py": "1593341eba8fd88c773493a9e5a35919449d6e2e672e4ecef41b3442db3c5434",
+    "legged_lab/assets/unitree/h1_2_tt.py": "603586da16abbe79d354cffa352a8a67ccc9d74dfefc874c8f9bffec6d8aeb29",
+    "legged_lab/assets/unitree/H1_2_BASE/H1_2.usd": "9e56da0b5b620e0da413d9c44e88cc1476881c1049ca2a0214dcb230865c355a",
+    "legged_lab/assets/unitree/H1_2_TT/H1_2_TT.usda": "4019faa67c93bafbf53f54ee5a56008b9afe0549753f6c3b5fb151c4eea4b327",
+    "legged_lab/envs/h1_2_tt/h1_2_tt_config.py": "4eacb07ae5b2f4abaf9b0f686b99c71d13bb18e172af92069025cab853cc5329",
+    "legged_lab/envs/h1_2_tt/h1_2_tt_env.py": "bafa249748acc992832a0fa0a76ff80ab58ec7adbc92b75d871ec039eb9d9d02"
+  },
+  "new_files_sha256": {
+    "legged_lab/envs/h1_2_tt_bilateral/__init__.py": "a38b8ee593d6ceba5afe643dc27499f59aae490ec1e1b04439ec95b3f551e48b",
+    "legged_lab/envs/h1_2_tt_bilateral/h1_2_tt_bilateral_config.py": "8929cf6a1d89701e4a3844b88c33904f70da0bb7f9910387ac47c83ec535a556",
+    "legged_lab/envs/h1_2_tt_bilateral/h1_2_tt_bilateral_env.py": "db761b02701573dd1a5ca15d80a92764b616fa7e64f54ddc793cc9f215a4fc8f",
+    "tools/h1_2/check_h1_2_bilateral.py": "7baefc5b1b7d1f30a5e3e110294460a273fb40028266a1eb0e0299581d19e0b0"
+  },
+  "registration_backup": "/workspace/projects/PACE-ICRA2026/tools/h1_2/backups/envs_init_before_bilateral_20261014_113721_204500.py",
+  "tasks": [
+    "h1_2_tt_bilateral",
+    "h1_2_tt_bilateral_eval"
+  ],
+  "experiment_name": "h1_2_table_tennis_bilateral",
+  "remote_interface_check": "pending after coordinate fix",
+  "training": "not started",
+  "scope": "approximate serve-region filtering and central stance guidance; no style/face reward or skill claim",
+  "coordinate_fix_applied": true,
+  "coordinate_fix_backups": [
+    "/workspace/projects/PACE-ICRA2026/tools/h1_2/backups/bilateral_coordinate_fix_20261014_130059_406116"
+  ]
+}

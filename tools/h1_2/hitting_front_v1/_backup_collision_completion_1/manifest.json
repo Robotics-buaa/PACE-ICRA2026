@@ -1,0 +1,27 @@
+{
+  "version": "hitting_front_v1",
+  "learning_updates": 0,
+  "required_files_sha256": {
+    "tools/h1_2/standing_v1_stage1/manifest.json": "a8eda919d1e9720376dc23735b3e5051f9feb08fcdad4a242157acbf6b5a97d5",
+    "tools/h1_2/standing_v1_stage1/common.py": "db200e3677b9c399886feb686c036c57a7730cd92a64fd21058ca347d5663ad4",
+    "tools/h1_2/standing_v1_stage1/metrics.py": "e8334a6ed3cae3fa3a4a652f59472c8396edd418476682dc4e7a9da6506bad42",
+    "tools/h1_2/standing_v1_stage1/train.py": "901d6a1cfa1b61be862c26de82a97ad51c9b3fd5ed63ef7f3441975ef31bcc30",
+    "tools/h1_2/standing_v1_stage1/evaluate.py": "3f866b9b6e9d345bba4e820ae9ef7a4c344dfe4b5002753afc4b7524840be39e",
+    "tools/h1_2/standing_v1_stage1/README.md": "a622ca2dfa55b2022a0b7682ba0f31f52c224bc06cbb45849287b239e0f2c6c0",
+    "tools/h1_2/standing_arm_hold_v1/manifest.json": "2b1fa3109f0028841fee58fc7f3fc8a963ec383fcd9d778010e32723923cb051",
+    "tools/h1_2/standing_arm_hold_v1/probe.py": "5588805ab1d25a70cd7549694c4660203e887d265d43ff1b121074888a64ee65",
+    "tools/h1_2/standing_arm_hold_v1/quiet_metrics.py": "38c72abd7dd08f77bdb3d664ad868b0ab43f83aa734de84480ac004e0a359609",
+    "tools/h1_2/standing_arm_hold_v1/README.md": "11b31ec5429cc0eedb4397bdd3e56d36ecc1c4e79f6622bdb50f9b442d5b96b2",
+    "tools/h1_2/hitting_balance_v1/manifest.json": "dd3c6aa50b404052d027765d005c8262bf55be95e96c1e422ab04c549ad5a649",
+    "tools/h1_2/hitting_balance_v1/probe.py": "7a170326eb388d2dae3bbd44f15d2d6240853c8f31376466b0b03aee6c751e71",
+    "tools/h1_2/hitting_balance_v1/logic.py": "feb5fe979f6121ba3e346712daa475f7741ff55f918693317754b6e260876eeb",
+    "tools/h1_2/hitting_balance_v1/README.md": "5046030f9ec2583adc8602a9d39236bf60fd375d224901b9ce7937c2b8e1c688"
+  },
+  "files_sha256": {
+    "probe.py": "02867e1165e696cb1949dfa2c95089d1f58a9f6af411d38e96d0b288a1f5a230",
+    "logic.py": "003bd54d4d436ebc1165d593d02d311574f01937ef7520f2fdf84affab410b01",
+    "guard.py": "d7062e4a813ac5f483d736b27151c35469dc7fc0ac517e081fb353007b8d458f",
+    "runtime.py": "c066caa3bcdb7602dcd5971e4009693a6111fe3237eb0fb40c4985cc260d2135",
+    "README.md": "2567176c171ec351642c2d145754cb70bd10cb226e61ca5aeb120449fa6da17d"
+  }
+}

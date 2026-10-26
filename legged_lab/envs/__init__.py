@@ -45,3 +45,23 @@ from legged_lab.envs.g1_tt_wrist.g1_tt_wrist_config import (
 task_registry.register("g1_tt_wrist", G1WristTTEnv, G1WristTableTennisEnvCfg(), G1WristTableTennisAgentCfg())
 task_registry.register("g1_tt_wrist_eval", G1WristTTEnv, G1WristTT_EvalEnvCfg(), G1WristTableTennisAgentCfg())
 # END PACE G1 WRIST TASKS
+
+# BEGIN PACE H1-2 TASKS
+from legged_lab.envs.h1_2_tt.h1_2_tt_env import H1_2TTEnv
+from legged_lab.envs.h1_2_tt.h1_2_tt_config import (
+    H1_2TableTennisEnvCfg, H1_2TT_EvalEnvCfg, H1_2TableTennisAgentCfg,
+)
+task_registry.register("h1_2_tt", H1_2TTEnv, H1_2TableTennisEnvCfg(), H1_2TableTennisAgentCfg())
+task_registry.register("h1_2_tt_eval", H1_2TTEnv, H1_2TT_EvalEnvCfg(), H1_2TableTennisAgentCfg())
+# END PACE H1-2 TASKS
+
+# BEGIN PACE H1-2 BILATERAL TASKS
+from legged_lab.envs.h1_2_tt_bilateral.h1_2_tt_bilateral_env import H1_2BilateralEnv
+from legged_lab.envs.h1_2_tt_bilateral.h1_2_tt_bilateral_config import (
+    H1_2BilateralEnvCfg, H1_2BilateralEvalEnvCfg, H1_2BilateralAgentCfg,
+)
+task_registry.register("h1_2_tt_bilateral", H1_2BilateralEnv, H1_2BilateralEnvCfg(), H1_2BilateralAgentCfg())
+task_registry.register("h1_2_tt_bilateral_eval", H1_2BilateralEnv, H1_2BilateralEvalEnvCfg(), H1_2BilateralAgentCfg())
+# END PACE H1-2 BILATERAL TASKS
+
+from legged_lab.envs.g1_tt_wrist import backhand_v2

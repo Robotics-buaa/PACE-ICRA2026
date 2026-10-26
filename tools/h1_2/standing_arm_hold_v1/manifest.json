@@ -1,0 +1,16 @@
+{
+  "version": "standing_arm_hold_v1",
+  "learning_updates": 0,
+  "required_files_sha256": {
+    "tools/h1_2/standing_v1_stage1/manifest.json": "a8eda919d1e9720376dc23735b3e5051f9feb08fcdad4a242157acbf6b5a97d5",
+    "tools/h1_2/standing_recovery_v1/manifest.json": "8c9e633d3d5c5da2df9088910f283609acd650dfba79e211d609c0e136fc14aa",
+    "tools/h1_2/standing_recovery_v1/probe.py": "01813e7ca9bb5b7669db2584fd21fc5b9ae2e57f33c1fd47d10a9b02ba58954b",
+    "tools/h1_2/standing_recovery_v1/recovery_metrics.py": "57c70fea057d11c5f67e2a70fe3dfdb7d6b03e77d084dcb48195ce8cb9aa226b",
+    "tools/h1_2/standing_recovery_v1/README.md": "feb199480636bdc7533df5d5bd091e15d41d2d566cae19990c68b145d49ab263"
+  },
+  "files_sha256": {
+    "probe.py": "5588805ab1d25a70cd7549694c4660203e887d265d43ff1b121074888a64ee65",
+    "quiet_metrics.py": "38c72abd7dd08f77bdb3d664ad868b0ab43f83aa734de84480ac004e0a359609",
+    "README.md": "11b31ec5429cc0eedb4397bdd3e56d36ecc1c4e79f6622bdb50f9b442d5b96b2"
+  }
+}

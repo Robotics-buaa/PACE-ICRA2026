@@ -1,0 +1,33 @@
+{
+  "task_check_passed": true,
+  "num_envs": 2,
+  "control_steps": 24,
+  "num_actions": 27,
+  "num_joints": 27,
+  "actor_input": 495,
+  "actor_output": 27,
+  "critic_input": 580,
+  "critic_output": 1,
+  "predictor_input": 15,
+  "predictor_output": 3,
+  "reference_geometry": {
+    "base_height_before": 1.0,
+    "reference_base_height": 0.9990442317426205,
+    "initial_foot_clearance": 0.002,
+    "foot_collision_prims": [
+      "/World/envs/env_0/Robot/left_ankle_roll_link/collisions",
+      "/World/envs/env_0/Robot/right_ankle_roll_link/collisions"
+    ],
+    "method": "default-pose foot collision bounds on plane; not a learned standing stability test"
+  },
+  "measured_paddle_offset_b": [
+    0.14191818237304688,
+    -0.28223007917404175,
+    -0.20257407426834106
+  ],
+  "head_distance_reward_disabled": true,
+  "protected_files_verified": true,
+  "learning_iterations": 0,
+  "learned_steps": 0,
+  "scope": "task interface only; no learned H1-2 performance or long-horizon standing stability claim"
+}
